@@ -12,10 +12,10 @@ const updatedprod = products.map(product=>{
     return product;
 });
 
-const discountedprod = products.filter(product=>{
-    product.quantity>100;
+const discountedprod = updatedprod.filter(product=>{
+    return product.quantity>100;
 });
 
 discountedprod.forEach(product =>{
-    console.log("Product : `$(product.name)`, Price : `$(product.price)`");
+    console.log(`Product : ${product.name}, Price : ${product.price}`);
 })
